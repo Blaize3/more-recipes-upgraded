@@ -1,0 +1,57 @@
+.body-container-header {
+    width: 100%;
+    background-color: rgba(54, 53, 53, 0.5);
+}
+
+.top-recipe-top {
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.my-text-left {
+    text-align: left;
+}
+
+.my-text-right {
+    text-align: right;
+}
+
+.nextprev:hover {
+    text-decoration: none;
+    color: #ff1744;
+}
+
+.container-padded {
+    padding: 5px 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img.ultimate {
+    background: url(../_images/ul1.jpg) no-repeat 0 0;
+    animation-name: ultimateSlider;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes SlideShow {
+    0% {
+        content: url(../_images/ul1.jpg);
+    }
+    20% {
+        content: url(../_images/ul2.jpg);
+    }
+    40% {
+        content: url(../_images/ul3.jpg);
+    }
+    60% {
+        content: url(../_images/ul4.jpg);
+    }
+    80% {
+        content: url(../_images/ul5.jpg);
+    }
+    100% {
+        content: url(../_images/ul1.jpg);
+    }
+}

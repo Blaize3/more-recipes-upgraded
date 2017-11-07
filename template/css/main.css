@@ -1,0 +1,179 @@
+* {
+    font-family: 'Old Standard TT', serif;
+    font-size: 20px;
+    /* background: #fff; */
+}
+
+body {
+    width: 100%;
+    background-color: rgba(54, 53, 53, 0.8);
+}
+
+.header-menu {
+    position: relative;
+    /* filter: brightness(80%); */
+}
+
+.header-image {
+    height: 600px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: url(../images/homePage.jpg) center center no-repeat;
+    /* background: #ddd; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.transparency {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    background-color: rgba(54, 53, 53, 0.5)
+}
+
+.bottom-container-holder {
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+}
+
+.buttom-container {
+    background-color: rgba(54, 53, 53, 0.5)
+}
+
+.main-logo {
+    font-size: 300%;
+    font-family: 'Lobster', cursive;
+}
+
+.search-padding {
+    margin-left: 30px;
+}
+
+.nav-menu-padding {
+    margin-left: 30px;
+}
+
+.hamburger-button {
+    /* filter: brightness(100%); */
+    background-color: rgba(0, 0, 0, 0.0)
+}
+
+.menu-text-coloration {
+    color: #fff;
+}
+
+.menu-text-coloration:hover {
+    color: #ff1744;
+}
+
+.footer-container {
+    width: 100%;
+    background-color: rgba(54, 53, 53, 0.5);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tbl-icon {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row-icon {
+    display: table-row;
+}
+
+.cell-icon {
+    display: table-cell;
+    display: inline-flex;
+    padding: 0px 7px;
+}
+
+.jumbotron-edited {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+}
+
+.card-body-edited {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0.5rem;
+}
+
+.card {
+    margin: 4px;
+    background-color: #fff;
+}
+
+.card:hover {
+    background-color: #f7617f;
+}
+
+img {
+    margin: auto;
+    max-width: 98%;
+}
+
+.summary {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.summary a:link,
+.summary a:visited {
+    font-family: cursive;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.summary a:hover {
+    text-decoration: none;
+    color: #f7617f;
+}
+
+.like-icon {
+    color: #f7617f;
+}
+
+.up-vote-icon {
+    color: #037403;
+}
+
+.down-vote-icon {
+    color: #ad0505;
+}
+
+.comment-icon {
+    color: #0307df;
+}
+
+.like-icon:hover {
+    color: #aaa;
+}
+
+.up-vote-icon:hover {
+    color: #aaa;
+}
+
+.down-vote-icon:hover {
+    color: #aaa;
+}
+
+.comment-icon:hover {
+    color: #aaa;
+}
+
+
+/* 
+font-family: 'Lobster', cursive;
+font-family: 'Libre Franklin', sans-serif;
+font-family: 'Poiret One', cursive;
+font-family: 'Old Standard TT', serif;
+font-family: 'Satisfy', cursive;
+font-family: 'Cookie', cursive;
+*/
