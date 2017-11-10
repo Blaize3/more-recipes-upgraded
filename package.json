@@ -4,7 +4,8 @@
     "description": "more-recipes is a social network for food lovers.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start:dev": "nodemon --exec ./node_modules/.bin/babel-node ./server/app.js",
+        "test": ""
     },
     "repository": {
         "type": "git",

@@ -1,0 +1,9 @@
+sequelize model:create --name User --attributes email:string,password:string,firstname:string,lastname:string,sex:string
+
+sequelize model:create --name Recipe --attributes userId:integer,name:string,origin:string,description:string,ingredients:string,instructions:string,review:string,voteCount:integer
+
+sequelize model:create --name Review --attributes userId:integer,recipeId:integer,comment:string
+
+sequelize model:create --name Favorite --attributes userId:integer,recipeId:integer
+
+sequelize model:create --name Vote --attributes userId:integer,recipeId:integer,hasVoted:boolean
