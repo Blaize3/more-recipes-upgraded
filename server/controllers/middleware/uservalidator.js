@@ -109,7 +109,7 @@ class UserInputValidators {
         return isValidResult;
     }
 
-    static signupValidators(userObject) {
+    static resetPasswordValidators(userObject) {
         let errorCount = 0;
         let errorMessage = 'Input error: \n';
         let hasFailed = false;

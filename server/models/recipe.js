@@ -1,53 +1,52 @@
-
 module.exports = (sequelize, DataTypes) => {
-  const Recipe = sequelize.define('Recipe', {
-    userId: {
-      allowNull: false,
-      type: DataTypes.INTEGER
-    },
-    name: {
-      allowNull: false,
-      type: DataTypes.STRING
-    },
-    origin: {
-      allowNull: true,
-      type: DataTypes.STRING
-    },
-    description: {
-      allowNull: true,
-      type: DataTypes.TEXT
-    },
-    ingredients: {
-      allowNull: true,
-      type: DataTypes.STRING
-    },
-    instructions: {
-      allowNull: true,
-      type: DataTypes.TEXT
-    },
-    review: {
-      allowNull: true,
-      type: DataTypes.TEXT
-    },
-    voteCount: {
-      allowNull: false,
-      type: DataTypes.INTEGER
-    }
-  });
-
-  Recipe.associate = (models) => {
-    Recipe.belongsTo(models.User, {
-      foreignKey: 'userId',
-      onDelete: 'CASCADE'
+    const Recipe = sequelize.define('Recipe', {
+        userId: {
+            allowNull: false,
+            type: DataTypes.INTEGER
+        },
+        name: {
+            allowNull: false,
+            type: DataTypes.STRING
+        },
+        origin: {
+            allowNull: true,
+            type: DataTypes.STRING
+        },
+        description: {
+            allowNull: true,
+            type: DataTypes.TEXT
+        },
+        ingredients: {
+            allowNull: true,
+            type: DataTypes.STRING
+        },
+        instructions: {
+            allowNull: true,
+            type: DataTypes.TEXT
+        },
+        review: {
+            allowNull: true,
+            type: DataTypes.TEXT
+        },
+        voteCount: {
+            allowNull: false,
+            type: DataTypes.INTEGER
+        }
     });
 
-    Recipe.hasMany(models.Review, {
-      foreignKey: 'recipeId'
-    });
+    Recipe.associate = (models) => {
+        Recipe.belongsTo(models.User, {
+            foreignKey: 'userId',
+            onDelete: 'CASCADE'
+        });
 
-    Recipe.hasMany(models.Vote, {
-      foreignKey: 'recipeId'
-    });
-  };
-  return Recipe;
+        Recipe.hasMany(models.Review, {
+            foreignKey: 'recipeId'
+        });
+
+        Recipe.hasMany(models.Vote, {
+            foreignKey: 'recipeId'
+        });
+    };
+    return Recipe;
 };
