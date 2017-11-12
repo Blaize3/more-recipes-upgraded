@@ -8,12 +8,13 @@ class Token {
     }
 
     static decodeToken(tokenObject) {
+        let decode;
         if (tokenObject) {
             jwt.verify(tokenObject, code.secret, (err, decoded) => {
                 if (err) {
                     return 'token verification failed';
                 }
-
+                // console.log(decoded);
                 return decoded;
             }); // ends verify
         } else {

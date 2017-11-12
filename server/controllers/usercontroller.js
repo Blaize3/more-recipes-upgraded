@@ -81,7 +81,7 @@ class HandleUserRequests {
             newPassword: request.body.newPassword
         }
 
-        const validateAccountCreateObject = UserInputValidators.signupValidators(userObject);
+        const validateAccountCreateObject = UserInputValidators.resetPasswordValidators(userObject);
         if (validateAccountCreateObject.isNotValid) {
             console.log(validateAccountCreateObject.isNotValid);
             return response.status(400).send({
