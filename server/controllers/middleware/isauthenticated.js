@@ -5,7 +5,9 @@ class checkUserAuthentication {
 
     static isAuthenticated(request, response, next) {
         const token = request.body.token || request.query.token || request.headers['x-access-token'];
-        const decoded = Token.decodeToken(token);
+        let decoded = Token.decodeToken(token);
+        console.log(decoded());
+
 
         if (decoded === 'no token') {
             return response.status(401).send({
@@ -17,7 +19,7 @@ class checkUserAuthentication {
             });
         } else {
             return User
-                .findOne({ id: decoded.userID })
+                .findOne({ id: parseInt(decoded.userID) })
                 .then((user) => {
                     if (!user) {
                         return response.status(401).send({
@@ -25,7 +27,7 @@ class checkUserAuthentication {
                         });
                     }
                     request.decoded = decoded;
-                    next();
+                    // next();
                 })
                 .catch(() => {
                     return response.status(500).send({
@@ -35,3 +37,5 @@ class checkUserAuthentication {
         }
     }
 }
+
+export default checkUserAuthentication;

@@ -18,15 +18,15 @@ module.exports = (sequelize, DataTypes) => {
         },
         ingredients: {
             allowNull: true,
-            type: DataTypes.STRING
+            type: DataTypes.ARRAY(DataTypes.STRING)
         },
         instructions: {
             allowNull: true,
-            type: DataTypes.TEXT
+            type: DataTypes.ARRAY(DataTypes.TEXT)
         },
         review: {
             allowNull: true,
-            type: DataTypes.TEXT
+            type: DataTypes.ARRAY(DataTypes.TEXT)
         },
         voteCount: {
             allowNull: false,
